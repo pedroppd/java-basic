@@ -36,5 +36,8 @@ public class Data {
 		Date x5 = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
 		sdf1.setTimeZone(TimeZone.getTimeZone("GMT"));
 		System.out.println("x5: " +sdf1.format(x5));
+		
+		
+		
 	}
 }
