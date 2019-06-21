@@ -1,10 +1,12 @@
 package course.poo.aplication;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import course.poo.Funcionario;
-import course.poo.Produto;
+import course.poo.entitys.Order;
+import course.poo.enums.OrderStatus;
 
 public class Program {
 
@@ -33,7 +35,7 @@ public class Program {
 		
 		System.out.println("Total: " + produto.totalValueInStock());
 		
-		*/
+		
 		
 		Funcionario funcionario = new Funcionario(sc.nextLine(), sc.nextDouble(), sc.nextDouble());
 		System.out.println(funcionario);
@@ -44,6 +46,17 @@ public class Program {
 		System.out.println("Incremente uma porcentagem ao seu salário: ");
 		funcionario.increaseSalary(sc.nextDouble());
 		System.out.println("Valores atualizados: " + funcionario);
+		
+		*/
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Date data = new Date();
+		
+		Order order = new Order(1, new Date(), OrderStatus.valueOf("PROCESSING"));
+		
+		System.out.println(order);
+		
+		
+	
 	}
 
 }
